@@ -9,16 +9,21 @@ import { MessageCircle, Send, Mail, MessagesSquare } from "lucide-react";
 
 const Support = () => {
   const [liveChatOpen, setLiveChatOpen] = useState(false);
+
+  const telegramLink = "https://t.me/Redpay717287";
+  const whatsappLink = "https://wa.me/2348133514609";
+  const whatsappGroupLink = "https://chat.whatsapp.com/GmHoh611iJ9CimpP7OMs3F";
+
   const handleTelegramSupport = () => {
-    window.open("https://t.me/red_pay22", "_blank");
+    window.open(telegramLink, "_blank", "noopener,noreferrer");
   };
 
   const handleWhatsAppSupport = () => {
-    window.open("https://t.me/red_pay22", "_blank");
+    window.open(whatsappLink, "_blank", "noopener,noreferrer");
   };
 
   const handleEmailSupport = () => {
-    window.location.href = "bluepaycompanyltd2@gmail.com";
+    window.location.href = "mailto:support@redpay.com";
   };
 
   const handleLiveChat = () => {
@@ -118,10 +123,15 @@ const Support = () => {
           </Card>
         </div>
 
-        {/* Additional Info */}
         <Card className="bg-card/60 backdrop-blur-sm border-border animate-fade-in">
-          <CardContent className="p-6">
-            <h3 className="font-bold text-foreground mb-3">Support Hours</h3>
+          <CardContent className="p-6 space-y-3">
+            <h3 className="font-bold text-foreground">Support Links</h3>
+            <div className="space-y-2 text-sm text-muted-foreground">
+              <p><strong className="text-foreground">Telegram:</strong> <a href={telegramLink} target="_blank" rel="noreferrer" className="text-primary underline">t.me/Redpay717287</a></p>
+              <p><strong className="text-foreground">WhatsApp:</strong> <a href={whatsappLink} target="_blank" rel="noreferrer" className="text-primary underline">0813 351 4609</a></p>
+              <p><strong className="text-foreground">WhatsApp Group:</strong> <a href={whatsappGroupLink} target="_blank" rel="noreferrer" className="text-primary underline">https://chat.whatsapp.com/GmHoh611iJ9CimpP7OMs3F</a></p>
+            </div>
+            <h3 className="font-bold text-foreground mt-4">Support Hours</h3>
             <p className="text-muted-foreground mb-2">
               24/7 Support - We're here for you around the clock
             </p>
